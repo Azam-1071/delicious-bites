@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Delicious Bites</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <h2 class="logo">Delicious<span>Bites</span></h2>
+        <nav>
+            <ul id="menuList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- Menu Section -->
+    <main>
+        <section class="menu-section">
+            <h1>Our Delicious Menu</h1>
+            <div class="menu-grid">
+                
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Burger">
+                    <h3>Cheeseburger</h3>
+                    <p>Rs. 450</p>
+                    <button class="btn" onclick="openModal('Cheeseburger', 'Rs. 450', 'Juicy beef patty with fresh cheese and veggies.')">View Details</button>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza">
+                    <h3>Italian Pizza</h3>
+                    <p>Rs. 1,200</p>
+                    <button class="btn" onclick="openModal('Italian Pizza', 'Rs. 1,200', 'Freshly baked pizza topped with mozzarella and herbs.')">View Details</button>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1749384156571-93b5c1b9ff92?w=400" alt="Pasta">
+                    <h3>Creamy Pasta</h3>
+                    <p>Rs. 850</p>
+                    <button class="btn" onclick="openModal('Creamy Pasta', 'Rs. 850', 'Rich creamy sauce pasta garnished with parmesan.')">View Details</button>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1737513916865-63c7fd3b67a7?w=400" alt="Grilled Sandwich">
+                    <h3>Grilled Sandwich</h3>
+                    <p>Rs. 550</p>
+                    <button class="btn" onclick="openModal('Grilled Sandwich', 'Rs. 550', 'Toasted bread loaded with melted cheese and grilled veggies.')">View Details</button>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1606755456206-b25206cde27e?w=400" alt="French Fries">
+                    <h3>French Fries</h3>
+                    <p>Rs. 300</p>
+                    <button class="btn" onclick="openModal('French Fries', 'Rs. 300', 'Crispy golden fries served hot with your choice of dip.')">View Details</button>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1688577727939-3c065e99890b?w=400" alt="Chocolate Brownie">
+                    <h3>Chocolate Brownie</h3>
+                    <p>Rs. 400</p>
+                    <button class="btn" onclick="openModal('Chocolate Brownie', 'Rs. 400', 'Warm fudgy brownie with a rich chocolate center.')">View Details</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal Popup (Hidden by Default) -->
+        <div id="foodModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Item Name</h2>
+                <h4 id="modalPrice">$0.00</h4>
+                <p id="modalDesc">Description goes here...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Delicious Bites</h4>
+                <p>Fresh, honest food made with care since 2020.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div>
+                <h4>Visit Us</h4>
+                <p>123 Market Street, Lahore</p>
+                <p>Open daily &middot; 11am &ndash; 11pm</p>
+            </div>
+            <div>
+                <h4>Follow</h4>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 5.9c-.7.3-1.4.5-2.2.6.8-.5 1.4-1.2 1.6-2.2-.7.5-1.6.8-2.4 1a3.8 3.8 0 0 0-6.5 3.5A10.9 10.9 0 0 1 2.9 4.8a3.8 3.8 0 0 0 1.2 5.1c-.6 0-1.2-.2-1.7-.5v.1c0 1.9 1.3 3.4 3.1 3.8-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1a3.8 3.8 0 0 0 3.6 2.7A7.7 7.7 0 0 1 2 17.5a10.9 10.9 0 0 0 5.9 1.7c7 0 10.9-5.9 10.9-10.9v-.5c.7-.5 1.4-1.2 1.9-2z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Delicious Bites. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
